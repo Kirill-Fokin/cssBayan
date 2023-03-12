@@ -1,0 +1,274 @@
+* {
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+
+:root {
+  --color-primary: #235ad1;
+}
+
+
+h1 {
+  font-size: 30px;
+  font-weight: 900;
+  text-align: left;
+  align-self: baseline;
+}
+
+body {
+  background-color: rgb(216, 215, 211);
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  font-size: 10px;
+}
+
+img {
+  height:20em;
+  width:20em;
+}
+
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(216, 215, 211);
+  max-height:100em;
+  max-width:70em;
+}
+
+.accordion {
+  
+  max-width: 50em;
+  margin: 2em auto;
+  padding: 0  2em 0 0 ;
+}
+
+.acc-item {
+  position:relative;
+  min-width: 70em;
+  min-height: 6em;
+}
+
+.acc-title {
+  display: block;
+  text-align: left;
+  font-size: 2em;
+  font-family: Arial;
+  cursor: pointer;
+  padding: 1em ;
+  font-weight: 800;
+  color:rgb(69, 12, 255);
+  transition: color .8s ease-in-out;  
+  transition: padding-bottom 1s;
+}
+
+
+.accordion:hover  .acc-title {
+  color: black;
+  transition: color .8s ease-in-out;
+}
+ 
+.acc-input:checked ~ .acc-title {
+    color:black;
+    transition: color .8s ease-in-out;
+  }
+
+.acc-title:hover {
+ transition: background-color .4s ease-out;
+}
+
+.acc-input {
+  appearance: none;
+  position: absolute;
+  width:0;
+  height:0;
+  
+}
+.acc-text {
+  position: absolute;
+  top: 999em;
+  transform: scale(0);
+  opacity:0;
+  transition: opacity .6s, transform 6.s;  
+  
+ }
+
+.acc-input:checked ~ .acc-text { 
+  position: absolute;
+  top: 2em;
+  margin-left:20em;
+  margin-top:1em;
+  margin-bottom: 1em;
+  transform: scale(1);
+  opacity:1;
+  transition: opacity .6s, transform 6.s;  
+}
+
+.acc-input:checked + .acc-title {
+  padding-bottom: 200px;
+  transition: padding-bottom 1s;
+}
+
+.acc-item:hover .acc-text {
+  position: absolute;
+  top: 2em;
+  margin-left:20em;
+  margin-top:1em;
+  margin-bottom: 1em;
+  transform: scale(1);
+  opacity:1;
+  transition: opacity .4s, transform .4s;  
+}
+
+
+.acc-item:hover .acc-title {
+padding-bottom:200px;
+transition: padding-bottom .4s;
+}
+
+
+.line {
+  width: 50em;
+  border-top: 0.2em solid #a7a7a7;
+}
+
+*/
+
+
+
+
+
+.acc-input:checked ~ .acc-title {
+  padding-bottom:20em;
+}
+
+
+
+
+
+
+.acc-input:checked ~ .plus-container {
+  transform: rotate(50deg);
+  transition: opacity 2s, transform 2s;
+}
+
+/*.faq:hover .faq-title {
+  color:black;
+  transition:  color .8s;
+}
+*/
+
+.acc-item:hover .plus-container {
+  transform: rotate(50deg);
+  transition: opacity 2s, transform 2s;  
+}
+
+.plus-container {
+  position: absolute;
+  top:2em;
+  left:48em;
+  opacity:0;
+}
+
+.plus-image {
+  width:2.5em;
+  height:2.5em;
+}
+
+.accordion:hover .plus-container {
+  opacity:1;
+  transition: opacity 2s;
+}
+
+
+
+
+
+@media (max-width:820px) {
+
+  h1 {
+    font-size: 40px;
+    font-weight: 900;
+    text-align: left;
+    align-self: baseline;
+  }
+
+  .acc-title {
+
+    font-size: 25px;
+
+  }
+
+  .plus-image {
+    width:35px;
+    height:35px;
+  }
+
+  @media (max-width:320px) {
+    h1 {
+      font-size: 15px;
+      font-weight: 900;
+      text-align: left;
+      align-self: baseline;
+    }
+    img {
+      height:180px;
+      width:180px;
+    }
+    .accordion {
+  
+      max-width: 300px;
+      margin: 20px auto;
+      padding: 0  20px 0 0 ;
+    }
+
+    .plus-image {
+      width:45px;
+      height:45px;
+    }
+
+    .plus-container {
+      position: absolute;
+      top:10px;
+      left:630px;
+      opacity:0;
+    }
+    .acc-title {
+
+      font-size: 35px;
+  
+    }
+
+    .acc-item:hover .acc-text {
+      position: absolute;
+      top: 70px;
+      margin-left:200px;
+      margin-top:10px;
+      margin-bottom: 10px;
+      transform: scale(1);
+      opacity:1;
+      transition: opacity .4s, transform .4s;  
+    }
+
+    .acc-input:checked ~ .acc-text { 
+      position: absolute;
+      top: 70px;
+      margin-left:200px;
+      margin-top:10px;
+      margin-bottom: 10px;
+      transform: scale(1);
+      opacity:1;
+      transition: opacity .6s, transform 6.s;  
+    }
+
+    h1 {
+      font-size: 40px;;
+    }
+  
+  }
+
+}
