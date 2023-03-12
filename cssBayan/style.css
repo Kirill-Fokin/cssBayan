@@ -132,7 +132,7 @@ transition: padding-bottom .4s;
 
 
 .line {
-  width: 70em;
+  width: 50em;
   border-top: 0.2em solid #a7a7a7;
 }
 
@@ -170,7 +170,7 @@ transition: padding-bottom .4s;
 .plus-container {
   position: absolute;
   top:2em;
-  left:67em;
+  left:48em;
   opacity:0;
 }
 
