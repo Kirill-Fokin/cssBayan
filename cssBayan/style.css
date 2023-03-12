@@ -1,0 +1,181 @@
+* {
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+
+h1 {
+  font-size: 30px;
+  font-weight: 900;
+  text-align: left;
+  align-self: baseline;
+}
+
+body {
+  background-color: rgb(216, 215, 211);
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+img {
+  height:200px;
+  width:200px;
+}
+
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(216, 215, 211);
+  max-height:1000px;
+  max-width:700px;
+}
+
+.accordion {
+  
+  min-width: 500px;
+  margin: 20px auto;
+  padding: 0  20px 0 0 ;
+}
+
+.acc-item {
+  position:relative;
+  min-width: 700px;
+  min-height: 60px;
+}
+
+.acc-title {
+  display: block;
+  text-align: left;
+  font-size: 20px;
+  font-family: Arial;
+  cursor: pointer;
+  padding: 10px ;
+  font-weight: 800;
+  color:rgb(69, 12, 255);
+  transition: color .4s ease-in-out;  
+  transition: padding-bottom 1s;
+}
+
+
+.accordion:hover  .acc-title {
+  color: black;
+  transition: color .4s ease-in-out;
+}
+ 
+.acc-input:checked ~ .acc-title {
+    color:black;
+  }
+
+.acc-title:hover {
+ transition: background-color .4s ease-out;
+}
+
+.acc-input {
+  appearance: none;
+  position: absolute;
+  width:0;
+  height:0;
+  
+}
+.acc-text {
+  position: absolute;
+  top: 9999px;
+  transform: scale(0);
+  opacity:0;
+  transition: opacity .6s, transform 6.s;  
+  
+ }
+
+.acc-input:checked ~ .acc-text { 
+  position: absolute;
+  top: 20px;
+  margin-left:200px;
+  margin-top:10px;
+  margin-bottom: 10px;
+  transform: scale(1);
+  opacity:1;
+  transition: opacity .6s, transform 6.s;  
+}
+
+.acc-input:checked + .acc-title {
+  padding-bottom: 200px;
+  transition: padding-bottom 1s;
+}
+
+.acc-item:hover .acc-text {
+  position: absolute;
+  top: 20px;
+  margin-left:200px;
+  margin-top:10px;
+  margin-bottom: 10px;
+  transform: scale(1);
+  opacity:1;
+  transition: opacity .4s, transform .4s;  
+}
+
+
+.acc-item:hover .acc-title {
+padding-bottom:200px;
+transition: padding-bottom .4s;
+}
+
+
+.line {
+  width: 700px;
+  border-top: 2px solid #a7a7a7;
+}
+
+*/
+
+
+
+
+
+.acc-input:checked ~ .acc-title {
+  padding-bottom:200px;
+}
+
+
+
+
+
+
+.acc-input:checked ~ .plus-container {
+  transform: rotate(50deg);
+  transition: opacity 2s, transform 2s;
+}
+
+/*.faq:hover .faq-title {
+  color:black;
+  transition:  color .8s;
+}
+*/
+
+.acc-item:hover .plus-container {
+  transform: rotate(50deg);
+  transition: opacity 2s, transform 2s;  
+}
+
+.plus-container {
+  position: absolute;
+  top:20px;
+  left:670px;
+  opacity:0;
+}
+
+.plus-image {
+  width:25px;
+  height:25px;
+}
+
+.accordion:hover .plus-container {
+  opacity:1;
+  transition: opacity 2s;
+}
+
+
+
